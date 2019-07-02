@@ -4,12 +4,13 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
+import com.cz.navigationproject.Item
 import com.cz.navigationproject.R
 import kotlinx.android.synthetic.main.item_view.view.*
 import org.jetbrains.anko.AnkoLogger
 import org.jetbrains.anko.info
 
-class ShowAdapter(val mylist:List<Item>): RecyclerView.Adapter<ShowAdapter.ShowViewHolder>(), AnkoLogger {
+class ShowAdapter(val mylist:Array<Item>): RecyclerView.Adapter<ShowAdapter.ShowViewHolder>(), AnkoLogger {
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ShowViewHolder {
         info("create")
