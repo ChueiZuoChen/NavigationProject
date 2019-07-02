@@ -4,17 +4,17 @@
             xmlns:tools="http://schemas.android.com/tools" android:id="@+id/navigation"
             app:startDestination="@id/homeFragment">
 
-    <fragment android:id="@+id/homeFragment" android:name="com.cz.navigationproject.HomeFragment"
+    <fragment android:id="@+id/homeFragment" android:name="com.cz.navigationproject.home.HomeFragment"
               android:label="fragment_home" tools:layout="@layout/fragment_home">
         <action android:id="@+id/action_homeFragment_to_addFragment" app:destination="@id/addFragment"
                 app:popUpToInclusive="false"/>
     </fragment>
-    <fragment android:id="@+id/addFragment" android:name="com.cz.navigationproject.AddFragment"
+    <fragment android:id="@+id/addFragment" android:name="com.cz.navigationproject.add.AddFragment"
               android:label="fragment_add" tools:layout="@layout/fragment_add">
         <action android:id="@+id/action_addFragment_to_displayFragment" app:destination="@id/displayFragment"
                 app:popUpTo="@+id/addFragment" app:popUpToInclusive="true"/>
     </fragment>
-    <fragment android:id="@+id/displayFragment" android:name="com.cz.navigationproject.DisplayFragment"
+    <fragment android:id="@+id/displayFragment" android:name="com.cz.navigationproject.display.DisplayFragment"
               android:label="fragment_display" tools:layout="@layout/fragment_display">
         <action android:id="@+id/action_displayFragment_to_homeFragment" app:destination="@id/homeFragment"
                 app:popUpTo="@+id/displayFragment" app:popUpToInclusive="true"/>

@@ -1,4 +1,4 @@
-package com.cz.navigationproject
+package com.cz.navigationproject.add
 
 
 import android.os.Bundle
@@ -8,6 +8,7 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.databinding.DataBindingUtil
 import androidx.navigation.findNavController
+import com.cz.navigationproject.R
 import com.cz.navigationproject.databinding.FragmentAddBinding
 
 
@@ -18,7 +19,7 @@ class AddFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
-        binding = DataBindingUtil.inflate(inflater,R.layout.fragment_add,container,false)
+        binding = DataBindingUtil.inflate(inflater, R.layout.fragment_add,container,false)
         binding.buttonDisplay.setOnClickListener {
             it.findNavController().navigate(R.id.action_addFragment_to_displayFragment)
         }

@@ -1,4 +1,4 @@
-package com.cz.navigationproject
+package com.cz.navigationproject.home
 
 
 import android.os.Bundle
@@ -8,16 +8,17 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.databinding.DataBindingUtil
 import androidx.navigation.findNavController
-import com.cz.navigationproject.databinding.FragmentDisplayBinding
+import com.cz.navigationproject.R
+import com.cz.navigationproject.databinding.FragmentHomeBinding
 
 
-class DisplayFragment : Fragment() {
-    lateinit var binding: FragmentDisplayBinding
+class HomeFragment : Fragment() {
+    lateinit var binding: FragmentHomeBinding
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
         // Inflate the layout for this fragment
-        binding = DataBindingUtil.inflate(inflater,R.layout.fragment_display,container,false)
-        binding.buttonHome.setOnClickListener {
-            it.findNavController().navigate(R.id.action_displayFragment_to_homeFragment)
+        binding = DataBindingUtil.inflate(inflater, R.layout.fragment_home,container,false)
+        binding.buttonAdd.setOnClickListener {
+            it.findNavController().navigate(R.id.action_homeFragment_to_addFragment)
         }
         return binding.root
     }
